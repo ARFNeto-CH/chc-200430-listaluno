@@ -1,0 +1,16 @@
+TURMA 1
+5
+JOSE 6
+ANA 9
+Outro1 16
+Outro2 12
+Outro3 14
+TURMA 2
+5
+MARCELO 3
+CAROL 10
+Outro4 11
+Outro5 13
+Outro6 15
+cod
+
