@@ -23,7 +23,7 @@ int main(int argc, char** argv)
 {
     Aluno   alunos[200];   // os alunos
     int     criterio = 0;   // zero = cod nao zero classifica por nome
-    FILE* entrada = fopen("turmas.txt", "r");
+    FILE*   entrada = fopen("turmas.txt", "r");
     char    linha[20];
     int     N = 0;
     int     n_alunos = 0;
@@ -31,10 +31,8 @@ int main(int argc, char** argv)
 
     turma[0][0] = 0; // avisa la
     le_uma_turma(entrada, &n_alunos, alunos, turma[0]);
-    printf("Primeira Turma: \"%s\"\n", turma[0]);
     turma[1][0] = 1; // avisa la: turma 1
     le_uma_turma(entrada, &n_alunos, alunos, turma[1]);
-    printf("Segunda Turma: \"%s\"\n", turma[1]);
 
     fgets(linha, 5, entrada);
     linha[strlen(linha) - 1] = 0; // mesma coisa: tirar o '\n'
@@ -43,7 +41,7 @@ int main(int argc, char** argv)
     if (linha[0] != 'c') criterio = 1;
 
     mostra_alunos(n_alunos, alunos, turma, "\nOs alunos\n\n");
-    // antes de sair mostra as turmas
+    // antes de classificar mostra as turmas
     printf("\nTurmas: \"%s\" e \"%s\" Total de %d alunos\n",
         turma[0], turma[1], n_alunos);
     // poe em ordem
